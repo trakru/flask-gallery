@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+    <title>{{ image }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        img {
+            max-width: 90%;
+            max-height: 80vh;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <a href="{{ url_for('main.view_image', index=prev_index) }}">&#8592; Previous</a>
+        |
+        <a href="{{ url_for('main.index') }}">Back to Gallery</a>
+        |
+        <a href="{{ url_for('main.view_image', index=next_index) }}">Next &#8594;</a>
+    </div>
+    <div>
+        <img src="{{ url_for('main.serve_image', filename=image) }}" alt="{{ image }}">
+    </div>
+
+    <script>
+        document.addEventListener('keydown', function(event) {
+            if(event.key === 'ArrowLeft') {
+                window.location.href = "{{ url_for('main.view_image', index=prev_index) }}";
+            }
+            else if(event.key === 'ArrowRight') {
+                window.location.href = "{{ url_for('main.view_image', index=next_index) }}";
+            }
+        });
+    </script>
+</body>
+</html>

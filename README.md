@@ -1,0 +1,4 @@
+## Env variables to set
+ADMIN_USERNAME
+ADMIN_PASSWORD
+IMAGE_FOLDER
