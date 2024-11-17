@@ -3,3 +3,4 @@ Flask-HTTPAuth
 pyngrok
 werkzeug
 pyngrok
+gunicorn

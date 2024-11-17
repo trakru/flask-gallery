@@ -335,3 +335,151 @@ INFO:pyngrok.process.ngrok:t=2024-11-17T16:08:59+0530 lvl=info msg="session clos
 INFO:pyngrok.process.ngrok:t=2024-11-17T16:08:59+0530 lvl=info msg="accept failed" obj=tunnels.session obj=csess id=6a890a6dccf2 err="reconnecting session closed"
 INFO:pyngrok.process.ngrok:t=2024-11-17T16:08:59+0530 lvl=info msg="no more state changes" obj=tunnels.session
 INFO:pyngrok.process.ngrok:t=2024-11-17T16:08:59+0530 lvl=info msg="failed to accept connection: Listener closed" obj=tunnels.session clientid=f8e22060845eddb0aa595f368224f52e
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.0.46:8000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Nov/2024 17:03:22] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Nov/2024 17:03:44] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Nov/2024 17:03:44] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.0.46:8000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Nov/2024 17:05:35] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8672
+ * Running on http://192.168.0.46:8672
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Nov/2024 17:09:22] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Nov/2024 17:09:29] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Nov/2024 17:09:29] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8672
+ * Running on http://192.168.0.46:8672
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+WARNING:root:Failed login attempt with username: 
+INFO:werkzeug:127.0.0.1 - - [17/Nov/2024 17:11:17] "[31m[1mGET / HTTP/1.1[0m" 401 -
+INFO:root:Successful login by user: test2
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/ankushtrakru/Documents/code/personal/flask-gallery/.venv/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankushtrakru/Documents/code/personal/flask-gallery/.venv/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankushtrakru/Documents/code/personal/flask-gallery/.venv/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankushtrakru/Documents/code/personal/flask-gallery/.venv/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankushtrakru/Documents/code/personal/flask-gallery/.venv/lib/python3.11/site-packages/flask_httpauth.py", line 174, in decorated
+    return self.ensure_sync(f)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankushtrakru/Documents/code/personal/flask-gallery/app/routes.py", line 28, in index
+    return render_template('index.html', images=image_files)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankushtrakru/Documents/code/personal/flask-gallery/.venv/lib/python3.11/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankushtrakru/Documents/code/personal/flask-gallery/.venv/lib/python3.11/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankushtrakru/Documents/code/personal/flask-gallery/.venv/lib/python3.11/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/Users/ankushtrakru/Documents/code/personal/flask-gallery/.venv/lib/python3.11/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/ankushtrakru/Documents/code/personal/flask-gallery/app/templates/index.html", line 25, in top-level template code
+    <a href="{{ url_for('main.view_image', index=loop.index0) }}">
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankushtrakru/Documents/code/personal/flask-gallery/.venv/lib/python3.11/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankushtrakru/Documents/code/personal/flask-gallery/.venv/lib/python3.11/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankushtrakru/Documents/code/personal/flask-gallery/.venv/lib/python3.11/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'main.view_image' with values ['index']. Did you mean 'main.index' instead?
+INFO:werkzeug:127.0.0.1 - - [17/Nov/2024 17:11:23] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8672
+ * Running on http://192.168.0.46:8672
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:root:Successful login by user: test2
+INFO:werkzeug:127.0.0.1 - - [17/Nov/2024 17:15:15] "GET / HTTP/1.1" 200 -
+INFO:root:Successful login by user: test2
+INFO:werkzeug:127.0.0.1 - - [17/Nov/2024 17:15:15] "GET /image-files/17434790_1136384356467863_5068428774090032150_o.jpg HTTP/1.1" 200 -
+INFO:root:Successful login by user: test2
+INFO:werkzeug:127.0.0.1 - - [17/Nov/2024 17:15:15] "GET /image-files/18401858_1182930738479891_2183410616184826874_o.jpg HTTP/1.1" 200 -
+INFO:root:Successful login by user: test2
+INFO:root:Successful login by user: test2
+INFO:root:Successful login by user: test2
+INFO:werkzeug:127.0.0.1 - - [17/Nov/2024 17:15:15] "GET /image-files/17545447_1148669001906065_7314325081835855175_o.jpg HTTP/1.1" 200 -
+INFO:root:Successful login by user: test2
+INFO:werkzeug:127.0.0.1 - - [17/Nov/2024 17:15:15] "GET /image-files/19221568_1214002355372729_1906292202392891179_o.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Nov/2024 17:15:15] "GET /image-files/17855259_1154133064692992_6888039952674818590_o.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Nov/2024 17:15:15] "GET /image-files/19388677_1216384741801157_5300133990907056496_o.jpg HTTP/1.1" 200 -
+INFO:root:Successful login by user: test2
+INFO:root:Successful login by user: test2
+INFO:werkzeug:127.0.0.1 - - [17/Nov/2024 17:15:15] "GET /image-files/23334227_1332627833510180_9038106063088989229_o.jpg HTTP/1.1" 200 -
+INFO:root:Successful login by user: test2
+INFO:werkzeug:127.0.0.1 - - [17/Nov/2024 17:15:15] "GET /image-files/19983813_1237628869676744_1307524854808106962_o.jpg HTTP/1.1" 200 -
+INFO:root:Successful login by user: test2
+INFO:werkzeug:127.0.0.1 - - [17/Nov/2024 17:15:15] "GET /image-files/20627087_1254928251280139_814571820991472932_o.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Nov/2024 17:15:15] "GET /image-files/25299844_1360038747435755_199026725972713146_o.jpg HTTP/1.1" 200 -
+INFO:root:Successful login by user: test2
+INFO:root:Successful login by user: test2
+INFO:werkzeug:127.0.0.1 - - [17/Nov/2024 17:15:15] "GET /image-files/21319054_1283083485131282_4262919651230623268_o%20-%20Copy.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Nov/2024 17:15:15] "GET /image-files/21083554_1274928465946784_3856689477590675394_o.jpg HTTP/1.1" 200 -
+INFO:root:Successful login by user: test2
+INFO:werkzeug:127.0.0.1 - - [17/Nov/2024 17:15:15] "GET /image-files/21319054_1283083485131282_4262919651230623268_o.jpg HTTP/1.1" 200 -
+INFO:root:Successful login by user: test2
+INFO:werkzeug:127.0.0.1 - - [17/Nov/2024 17:15:15] "GET /image-files/24799545_1355845201188443_4809710663118673207_o.jpg HTTP/1.1" 200 -
+INFO:root:Successful login by user: test2
+INFO:werkzeug:127.0.0.1 - - [17/Nov/2024 17:15:15] "GET /image-files/22051202_1296713087101655_2721154969933582863_o.jpg HTTP/1.1" 200 -
+INFO:root:Successful login by user: test2
+INFO:werkzeug:127.0.0.1 - - [17/Nov/2024 17:15:15] "GET /image-files/19488707_1221955831244048_3113736082675505051_o.jpg HTTP/1.1" 200 -
+INFO:root:Successful login by user: test2
+INFO:werkzeug:127.0.0.1 - - [17/Nov/2024 17:15:16] "GET /images/0 HTTP/1.1" 200 -
+INFO:root:Successful login by user: test2
+INFO:werkzeug:127.0.0.1 - - [17/Nov/2024 17:15:17] "[36mGET /image-files/17434790_1136384356467863_5068428774090032150_o.jpg HTTP/1.1[0m" 304 -
+INFO:root:Successful login by user: test2
+INFO:werkzeug:127.0.0.1 - - [17/Nov/2024 17:15:18] "GET /images/1 HTTP/1.1" 200 -
+INFO:root:Successful login by user: test2
+INFO:werkzeug:127.0.0.1 - - [17/Nov/2024 17:15:19] "[36mGET /image-files/17545447_1148669001906065_7314325081835855175_o.jpg HTTP/1.1[0m" 304 -
+INFO:root:Successful login by user: test2
+INFO:werkzeug:127.0.0.1 - - [17/Nov/2024 17:15:19] "GET /images/2 HTTP/1.1" 200 -
+INFO:root:Successful login by user: test2
+INFO:werkzeug:127.0.0.1 - - [17/Nov/2024 17:15:19] "[36mGET /image-files/17855259_1154133064692992_6888039952674818590_o.jpg HTTP/1.1[0m" 304 -
+INFO:root:Successful login by user: test2
+INFO:werkzeug:127.0.0.1 - - [17/Nov/2024 17:15:20] "GET /images/3 HTTP/1.1" 200 -
+INFO:root:Successful login by user: test2
+INFO:werkzeug:127.0.0.1 - - [17/Nov/2024 17:15:20] "[36mGET /image-files/18401858_1182930738479891_2183410616184826874_o.jpg HTTP/1.1[0m" 304 -
+INFO:root:Successful login by user: test2
+INFO:werkzeug:127.0.0.1 - - [17/Nov/2024 17:15:21] "GET /images/4 HTTP/1.1" 200 -
+INFO:root:Successful login by user: test2
+INFO:werkzeug:127.0.0.1 - - [17/Nov/2024 17:15:21] "[36mGET /image-files/19221568_1214002355372729_1906292202392891179_o.jpg HTTP/1.1[0m" 304 -
+INFO:root:Successful login by user: test2
+INFO:werkzeug:127.0.0.1 - - [17/Nov/2024 17:15:22] "GET /images/5 HTTP/1.1" 200 -
+INFO:root:Successful login by user: test2
+INFO:werkzeug:127.0.0.1 - - [17/Nov/2024 17:15:22] "[36mGET /image-files/19388677_1216384741801157_5300133990907056496_o.jpg HTTP/1.1[0m" 304 -
+INFO:root:Successful login by user: test2
+INFO:werkzeug:127.0.0.1 - - [17/Nov/2024 17:15:23] "GET /images/6 HTTP/1.1" 200 -
+INFO:root:Successful login by user: test2
+INFO:werkzeug:127.0.0.1 - - [17/Nov/2024 17:15:23] "[36mGET /image-files/19488707_1221955831244048_3113736082675505051_o.jpg HTTP/1.1[0m" 304 -
+INFO:root:Successful login by user: test2
+INFO:werkzeug:127.0.0.1 - - [17/Nov/2024 17:15:23] "GET /images/7 HTTP/1.1" 200 -
+INFO:root:Successful login by user: test2
+INFO:werkzeug:127.0.0.1 - - [17/Nov/2024 17:15:24] "[36mGET /image-files/19983813_1237628869676744_1307524854808106962_o.jpg HTTP/1.1[0m" 304 -
+INFO:root:Successful login by user: test2
+INFO:werkzeug:127.0.0.1 - - [17/Nov/2024 17:15:24] "GET /images/8 HTTP/1.1" 200 -
+INFO:root:Successful login by user: test2
+INFO:werkzeug:127.0.0.1 - - [17/Nov/2024 17:15:24] "[36mGET /image-files/20627087_1254928251280139_814571820991472932_o.jpg HTTP/1.1[0m" 304 -

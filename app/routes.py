@@ -1,11 +1,20 @@
-from flask import Blueprint, render_template, send_from_directory, abort, url_for
-from app.auth import auth
+# app/routes.py
+
 import os
+from flask import Blueprint, render_template, send_from_directory, abort
+from app.auth import auth
 
 main = Blueprint('main', __name__)
 
-# dir path
 IMAGE_FOLDER = os.getenv('IMAGE_FOLDER')
+
+# Check if IMAGE_FOLDER is set
+if not IMAGE_FOLDER:
+    raise ValueError("IMAGE_FOLDER environment variable must be set")
+
+# Check if IMAGE_FOLDER is a valid directory
+if not os.path.isdir(IMAGE_FOLDER):
+    raise ValueError(f"IMAGE_FOLDER '{IMAGE_FOLDER}' is not a valid directory")
 
 # Get the list of image files and sort them
 image_files = sorted([

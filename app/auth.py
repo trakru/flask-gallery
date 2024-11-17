@@ -1,16 +1,25 @@
+# app/auth.py
+
 import os
 import logging
 from flask_httpauth import HTTPBasicAuth
 from werkzeug.security import generate_password_hash, check_password_hash
-from flask import current_app
 
 logging.basicConfig(filename='access.log', level=logging.INFO)
 
 auth = HTTPBasicAuth()
 
-# credentials
+# creds
+ADMIN_USERNAME = os.getenv('ADMIN_USERNAME')
+ADMIN_PASSWORD = os.getenv('ADMIN_PASSWORD')
+
+# creds check
+if not ADMIN_USERNAME or not ADMIN_PASSWORD:
+    raise ValueError("ADMIN_USERNAME and ADMIN_PASSWORD environment variables must be set")
+
+# creds dict
 users = {
-    os.getenv('ADMIN_USERNAME'): generate_password_hash(os.getenv('ADMIN_PASSWORD'))
+    ADMIN_USERNAME: generate_password_hash(ADMIN_PASSWORD)
 }
 
 @auth.verify_password
